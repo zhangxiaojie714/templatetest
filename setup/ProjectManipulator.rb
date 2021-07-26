@@ -92,7 +92,7 @@ RUBY
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
       File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
       
-      File.rename("../" + "Pod/Classes/Category/NSBundle+${POD_NAME}.{h,m}", "../Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".{h,m}")
+      File.rename("Pod/Classes/Category/NSBundle+${POD_NAME}.h", "Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".h")
 
       # rename xcproject
       File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")

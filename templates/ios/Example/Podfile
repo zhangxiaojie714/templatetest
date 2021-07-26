@@ -1,9 +1,13 @@
-use_frameworks!
+#use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'#官方仓库地址
+source 'http://192.168.23.204/widget-component/djwidget-specsRepo-ios.git'#组件库私有仓库地址
 
 platform :ios, '9.0'
 
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
+  pod 'dj-widget-ios'
+
 
   target '${POD_NAME}_Tests' do
     inherit! :search_paths

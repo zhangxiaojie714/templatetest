@@ -179,6 +179,18 @@ module Pod
 
     def rename_classes_folder
       FileUtils.mv "Pod", @pod_name
+      
+      Dir[File.join(@pod_name, "Classes/Category/*.{h,m}")].each do |file_name|
+          text = File.read(file_name)
+          text.gsub!("${POD_NAME}", @pod_name)
+          text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
+          text.gsub!("PROJECT_OWNER", user_name)
+          text.gsub!("USER_EMAIL", user_email)
+          text.gsub!("TODAYS_YEAR", year)
+          text.gsub!("TODAYS_DATE", date)
+          File.open(file_name, "w") { |file| file.puts text }
+    end
+      
     end
 
     def reinitialize_git_repo

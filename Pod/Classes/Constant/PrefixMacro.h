@@ -14,7 +14,7 @@
 
 //屏幕尺寸
 #define CPDScreenWidth ([UIScreen mainScreen].bounds.size.width)
-#define HScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define INCLUDED_PREFIXESScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
 //本地数据
 #define HUserDefault  [NSUserDefaults standardUserDefaults]

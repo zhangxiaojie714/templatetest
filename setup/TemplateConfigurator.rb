@@ -188,7 +188,7 @@ module Pod
           text.gsub!("USER_EMAIL", user_email)
           text.gsub!("TODAYS_YEAR", year)
           text.gsub!("TODAYS_DATE", date)
-          text.gsub!("INCLUDED_PREFIXES", @prefix_path)
+          text.gsub!("INCLUDED_PREFIXES", @customise_prefix)
 #          text.gsub!("CPD", customise_prefix)
           File.open(file_name, "w") { |file| file.puts text }
     end

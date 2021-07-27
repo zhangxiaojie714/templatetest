@@ -95,8 +95,8 @@ RUBY
      #自己添加的其他文件
       File.rename("Pod/Classes/Category/NSBundle+${POD_NAME}.h", "Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".h")
       File.rename("Pod/Classes/Category/NSBundle+${POD_NAME}.m", "Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".m")
-      File.rename("Pod/Classes/Target_Action/Target_${POD_NAME}.h", "Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".h")
-      File.rename("Pod/Classes/Target_Action/Target_${POD_NAME}.m", "Pod/Classes/Category/NSBundle+" +  @configurator.pod_name + ".m")
+      File.rename("Pod/Classes/Target_Action/Target_${POD_NAME}.h", "Pod/Classes/Target_Action/Target_" +  @configurator.pod_name + ".h")
+      File.rename("Pod/Classes/Target_Action/Target_${POD_NAME}.m", "Pod/Classes/Target_Action/Target_" +  @configurator.pod_name + ".m")
       
 
       # rename xcproject
